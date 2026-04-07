@@ -18,49 +18,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvTipPercentLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvBaseLabel"
-        tools:text="24%" />
-
-    <TextView
-        android:id="@+id/tvTipLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Tip"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvTipPercentLabel" />
-
-    <TextView
-        android:id="@+id/tvTotalLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Total"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvTipLabel" />
-
     <EditText
         android:id="@+id/etBaseAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:ems="8"
-        android:hint="Bill  Amount"
+        android:hint="Bill Amount"
         android:inputType="numberDecimal"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@id/tvBaseLabel"
         app:layout_constraintStart_toEndOf="@+id/tvBaseLabel"
         app:layout_constraintTop_toTopOf="@id/tvBaseLabel" />
+
+    <TextView
+        android:id="@+id/tvTipPercentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvBaseLabel"
+        tools:text="24%" />
 
     <SeekBar
         android:id="@+id/seekBarTip"
@@ -70,6 +50,59 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvTipPercentLabel"
         app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
         app:layout_constraintTop_toTopOf="@+id/tvTipPercentLabel" />
+
+    <TextView
+        android:id="@+id/tvTipDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarTip"
+        app:layout_constraintStart_toStartOf="@+id/seekBarTip"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
+        tools:text="Acceptable" />
+
+    <LinearLayout
+        android:id="@+id/llPresets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/seekBarTip"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarTip"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipDescription">
+
+        <Button
+            android:id="@+id/btn10Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:minWidth="0dp"
+            android:layout_marginEnd="8dp"/>
+        <Button
+            android:id="@+id/btn15Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%"
+            android:minWidth="0dp"
+            android:layout_marginEnd="8dp"/>
+        <Button
+            android:id="@+id/btn20Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20%"
+            android:minWidth="0dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Tip"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/llPresets" />
 
     <TextView
         android:id="@+id/tvTipAmount"
@@ -82,6 +115,16 @@
         tools:text="19.96" />
 
     <TextView
+        android:id="@+id/tvTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Total"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipLabel" />
+
+    <TextView
         android:id="@+id/tvTotalAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,5 +133,59 @@
         app:layout_constraintStart_toStartOf="@+id/tvTipAmount"
         app:layout_constraintTop_toTopOf="@+id/tvTotalLabel"
         tools:text="103.11" />
+
+    <TextView
+        android:id="@+id/tvSplitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Split"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalLabel" />
+
+    <EditText
+        android:id="@+id/etSplit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:hint="1"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSplitLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvSplitLabel" />
+
+    <TextView
+        android:id="@+id/tvPerPersonLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Each"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvSplitLabel" />
+
+    <TextView
+        android:id="@+id/tvPerPersonAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPerPersonLabel"
+        app:layout_constraintStart_toStartOf="@+id/etSplit"
+        app:layout_constraintTop_toTopOf="@+id/tvPerPersonLabel"
+        tools:text="51.55" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Made With 💕 By Manvinder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
