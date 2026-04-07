@@ -21,8 +21,9 @@ Hit the green Run button to launch it on your emulator.
 If you just want the app, you can install the TipCalculator_Manvinder.apk file I included.
 
 Screenshots
-<img width="1919" height="1039" alt="Screenshot 2026-04-06 201212" src="https://github.com/user-attachments/assets/177b7a45-b265-4928-8066-b6f8d24e90a3" />
-<img width="1059" height="576" alt="Screenshot 2026-04-06 202110" src="https://github.com/user-attachments/assets/352e4b21-6fcd-49a7-8140-53ba0a0a195b" />
+<img width="380" height="819" alt="Screenshot 2026-04-06 234926" src="https://github.com/user-attachments/assets/fea69a10-5c23-44f1-a047-a1e328069b97" />
+
+<img width="387" height="813" alt="Screenshot 2026-04-06 234912" src="https://github.com/user-attachments/assets/5a06d9ab-97d6-4f6a-a868-1db4e2ef1f79" />
 
 
 Demo Video
